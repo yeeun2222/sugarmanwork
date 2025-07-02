@@ -2,19 +2,25 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>앱 설치로 이동중...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앱 설치 페이지로 이동 중...</title>
   <script>
     const ua = navigator.userAgent.toLowerCase();
+
+    const iosUrl = "https://apps.apple.com/kr/app/%ED%94%84%EB%A1%AD-%EA%B3%B5%EC%9C%A0%EC%98%A4%ED%94%BC%EC%8A%A4-%EC%9A%B4%EC%98%81%EA%B4%80%EB%A6%AC-%ED%94%8C%EB%9E%AB%ED%8F%BC/id6447231487";
+    const androidUrl = "https://play.google.com/store/apps/details?id=so.prop";
+
+
     if (ua.includes("iphone") || ua.includes("ipad")) {
-      location.href = "https://apps.apple.com/kr/app/%ED%94%84%EB%A1%AD-%EA%B3%B5%EC%9C%A0%EC%98%A4%ED%94%BC%EC%8A%A4-%EC%9A%B4%EC%98%81%EA%B4%80%EB%A6%AC-%ED%94%8C%EB%9E%AB%ED%8F%BC/id6447231487";  // 여기 바꾸기
+      window.location.href = iosUrl;
     } else if (ua.includes("android")) {
-      location.href = "https://play.google.com/store/apps/details?id=so.prop";  // 여기 바꾸기
+      window.location.href = androidUrl;
     } else {
-      location.href = "https://play.google.com/store/apps/details?id=so.prop";  // 기본 리디렉션 주소
+      window.location.href = androidUrl;
     }
   </script>
 </head>
 <body>
-  <p>앱 설치 페이지로 이동 중입니다...⏳</p>
+  <p style="font-size: 1.2rem; text-align: center; margin-top: 40vh;">앱 설치 페이지로 이동 중입니다...⏳</p>
 </body>
 </html>
